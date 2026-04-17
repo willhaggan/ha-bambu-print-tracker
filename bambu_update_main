@@ -1,0 +1,74 @@
+blueprint:
+  name: Bambu Lab Print Status and Energy Tracker
+  description: >
+    Tracks a Bambu Lab 3D print and sends interactive mobile notifications to multiple devices for progress, completion, and failures. Features optional energy tracking, cost calculation, live camera snaps, quiet hours, and custom action buttons (including a smart Snooze/Mute).
+  domain: automation
+  input:
+    # --- PRINTER SENSORS SECTION ---
+    printer_sensors_section:
+      name: Printer Sensors
+      icon: mdi:printer-3d
+      input:
+        printer_status:
+          name: Print Status Sensor
+          description: The sensor tracking the current status of the printer.
+          selector:
+            entity:
+              domain: sensor
+        printer_progress:
+          name: Print Progress Sensor
+          description: The sensor tracking the completion percentage.
+          selector:
+            entity:
+              domain: sensor
+        printer_task_name:
+          name: Task Name Sensor
+          description: The sensor showing the name of the print job.
+          selector:
+            entity:
+              domain: sensor
+        printer_start_time:
+          name: Start Time Sensor
+          description: The sensor tracking when the print started.
+          selector:
+            entity:
+              domain: sensor
+        printer_end_time:
+          name: End Time Sensor
+          description: The sensor tracking when the print finished.
+          selector:
+            entity:
+              domain: sensor
+        printer_remaining_time:
+          name: Remaining Time Sensor (Optional)
+          description: The sensor tracking the remaining print time (usually reported in minutes).
+          default: ""
+          selector:
+            entity:
+              domain: sensor
+        printer_weight:
+          name: Print Weight Sensor
+          description: The sensor tracking the total weight of the print in grams.
+          selector:
+            entity:
+              domain: sensor
+              device_class: weight
+        printer_cover_image:
+          name: Cover Image Entity
+          description: The image entity showing the print preview (Fallback if camera is missing).
+          selector:
+            entity:
+              domain: image
+        printer_camera:
+          name: Printer Camera (Optional)
+          description: Select the live camera entity to include snapshots in notifications.
+          default: ""
+          selector:
+            entity:
+              domain: camera
+
+    # --- NOTIFICATION SETTINGS SECTION ---
+    notification_settings_section:
+      name: Notification Settings
+      icon: mdi:bell-ring
+      collapsed
