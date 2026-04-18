@@ -2,7 +2,7 @@
 
 A Home Assistant blueprint to monitor Bambu Lab 3D prints. This blueprint provides monitoring for print progress, completion, and failures, with integrated cost and energy tracking.
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2FYourGitHubUsername%2Fha-bambu-print-tracker%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fbambu_print_tracker.yaml)
+<a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fwillhaggan%2Fha-bambu-print-tracker%2Fblob%2Fmain%2Fbambu_update_main.yaml" target="_blank" rel="noreferrer noopener"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" alt="Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled." /></a>
 
 ---
 
